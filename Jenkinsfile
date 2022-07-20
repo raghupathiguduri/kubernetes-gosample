@@ -10,9 +10,6 @@ pipeline {
             }
         }
         stage('Build App') {
-            when {
-                expression { params.BRANCH != 'develop' }
-            }         
             steps {
                 goBuild()
             }
